@@ -6,132 +6,157 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        
-        <androidx.constraintlayout.widget.ConstraintLayout
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_view_1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
-            android:padding="20dp">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
-            <TextView
-                android:id="@+id/txt_weburl"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Web Url: "
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/edt_weburl"
-                app:layout_constraintBaseline_toBaselineOf="@id/edt_weburl"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/part_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="20dp">
 
-            <EditText
-                android:id="@+id/edt_weburl"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:text="https://www.google.com"
-                android:inputType="textWebEditText"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toEndOf="@id/txt_weburl"
-                app:layout_constraintEnd_toStartOf="@id/btn_browse"/>
+                <TextView
+                    android:id="@+id/txt_weburl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="https://"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/edt_weburl"
+                    app:layout_constraintBaseline_toBaselineOf="@id/edt_weburl"/>
 
-            <Button
-                android:id="@+id/btn_browse"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Browse"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toEndOf="@id/edt_weburl"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                <EditText
+                    android:id="@+id/edt_weburl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textSize="16sp"
+                    android:text="www.google.com"
+                    android:layout_marginStart="5dp"
+                    android:inputType="textWebEditText"
+                    app:layout_constraintStart_toEndOf="@id/txt_weburl"
+                    app:layout_constraintTop_toTopOf="@id/txt_weburl"/>
 
-            <TextView
-                android:id="@+id/txt_phoneno"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Phone No.: "
-                android:textStyle="bold"
-                android:layout_marginTop="25dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txt_weburl"
-                app:layout_constraintEnd_toStartOf="@id/edt_phoneno"/>
+                <Button
+                    android:id="@+id/btn_browse"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/baseline_search_12"
+                    app:layout_constraintTop_toTopOf="@id/txt_weburl"
+                    app:layout_constraintStart_toEndOf="@id/edt_weburl"
+                    app:layout_constraintBaseline_toBaselineOf="@id/edt_weburl"/>
 
-            <EditText
-                android:id="@+id/edt_phoneno"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:text="+91"
-                app:layout_constraintStart_toEndOf="@id/txt_phoneno"
-                app:layout_constraintBaseline_toBaselineOf="@id/txt_phoneno"
-                app:layout_constraintEnd_toStartOf="@id/btn_call"/>
+                <TextView
+                    android:id="@+id/txt_phoneno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+91"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_weburl"
+                    app:layout_constraintEnd_toStartOf="@id/edt_phoneno"
+                    app:layout_constraintBaseline_toBaselineOf="@id/edt_phoneno"/>
 
-            <Button
-                android:id="@+id/btn_call"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Call"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBaseline_toBaselineOf="@id/edt_phoneno"
-                app:layout_constraintStart_toEndOf="@id/edt_phoneno"/>
+                <EditText
+                    android:id="@+id/edt_phoneno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textSize="16sp"
+                    android:layout_marginTop="20dp"
+                    android:inputType="textWebEditText"
+                    app:layout_constraintStart_toStartOf="@id/edt_weburl"
+                    app:layout_constraintStart_toEndOf="@id/txt_phoneno"
+                    app:layout_constraintTop_toBottomOf="@id/txt_weburl"/>
 
-            <TextView
-                android:id="@+id/txt_calllog"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Call Log: "
-                android:textStyle="bold"
-                android:layout_marginTop="25dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txt_phoneno"/>
+                <Button
+                    android:id="@+id/btn_call"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/baseline_call_12"
+                    app:layout_constraintTop_toTopOf="@id/txt_phoneno"
+                    app:layout_constraintStart_toEndOf="@id/edt_phoneno"
+                    app:layout_constraintBaseline_toBaselineOf="@id/edt_phoneno"/>
 
-            <Button
-                android:id="@+id/btn_calllog"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Call Log"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBaseline_toBaselineOf="@id/txt_calllog"/>
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edt_phoneno">
 
-            <TextView
-                android:id="@+id/txt_gallery"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Gallery: "
-                android:textStyle="bold"
-                android:layout_marginTop="25dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txt_calllog"/>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp">
 
-            <Button
-                android:id="@+id/btn_gallery"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Gallery"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBaseline_toBaselineOf="@id/txt_gallery"/>
+                        <Button
+                            android:id="@+id/btn_calllog"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/btn_gallery"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:background="@drawable/baseline_calllog_12"/>
 
-            <TextView
-                android:id="@+id/txt_camera"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Gallery: "
-                android:textStyle="bold"
-                android:layout_marginTop="25dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txt_calllog"/>
+                        <Button
+                            android:id="@+id/btn_gallery"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            app:layout_constraintStart_toEndOf="@id/btn_calllog"
+                            app:layout_constraintEnd_toStartOf="@id/btn_camera"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:background="@drawable/baseline_gallery_12"/>
 
-            <Button
-                android:id="@+id/btn_gallery"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Gallery"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBaseline_toBaselineOf="@id/txt_gallery"/>
+                        <Button
+                            android:id="@+id/btn_camera"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            app:layout_constraintStart_toEndOf="@id/btn_gallery"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/btn_alarm"
+                            android:background="@drawable/baseline_photo_camera_12"/>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                        <Button
+                            android:id="@+id/btn_alarm"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            app:layout_constraintStart_toEndOf="@id/btn_camera"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:background="@drawable/baseline_alarm_12"/>
 
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
     </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
