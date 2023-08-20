@@ -143,7 +143,7 @@
 
                         <Button
                             android:id="@+id/btn_alarm"
-                            android:layout_width="50dp"
+                            android:layout_width="45dp"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="20dp"
                             app:layout_constraintStart_toEndOf="@id/btn_camera"
