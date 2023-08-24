@@ -27,16 +27,21 @@ class MainActivity : AppCompatActivity() {
         var btn_alarm: Button = findViewById(R.id.btn_alarm)
 
         btn_browse.setOnClickListener{
-            Intent(Intent.ACTION_VIEW, Uri.parse("https://${edt_weburl.text.toString()}")).also { startActivity(it) }
+            if(edt_weburl.text.toString().isNotEmpty()){
+                Intent(Intent.ACTION_VIEW, Uri.parse("https://${edt_weburl.text.toString()}")).also { startActivity(it) }
+            }
+            else if(edt_weburl.text.toString()  == ""){
+                Toast.makeText(this,"Enter url to browse!",Toast.LENGTH_SHORT).show()
+            }
         }
 
         btn_call.setOnClickListener {
-            if(edt_phoneno.toString() != null){
-//                Intent(Intent.ACTION_DIAL, Uri.parse("tel:"+8802177690)).also { startActivity(it) }
+            if(edt_phoneno.text.toString().isNotEmpty()){
                 Intent(Intent.ACTION_DIAL, Uri.parse("tel:${edt_phoneno.text.toString()}")).also { startActivity(it) }
+//                Intent(Intent.ACTION_CALL, Uri.parse("tel:${edt_phoneno.text.toString()}")).also { startActivity(it) }
             }
-            else if(edt_phoneno == null){
-                Toast.makeText(this,"Enter mobile number to make call",Toast.LENGTH_SHORT).show()
+            else if(edt_phoneno.text.toString()  == ""){
+                Toast.makeText(this,"Enter mobile number to make call!",Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -45,7 +50,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         btn_gallery.setOnClickListener {
-            Intent(Intent.ACTION_VIEW).setType("Images/*").also { startActivity(it) }
+            Intent(Intent.ACTION_VIEW).setType("image/*").also { startActivity(it) }
         }
 
         btn_camera.setOnClickListener {
