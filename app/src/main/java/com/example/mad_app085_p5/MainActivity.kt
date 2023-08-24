@@ -58,7 +58,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         btn_alarm.setOnClickListener {
-            Intent(AlarmClock.ACTION_SHOW_ALARMS).also { startActivity(it) }
+//            Intent(AlarmClock.ACTION_SHOW_ALARMS).also { startActivity(it) }
+            Intent(AlarmClock.ACTION_SET_ALARM).also { startActivity(it) }
         }
     }
 }
