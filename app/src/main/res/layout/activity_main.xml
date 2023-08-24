@@ -8,20 +8,22 @@
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card_view_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
             android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="10dp"
             app:cardCornerRadius="15dp"
             app:cardElevation="20dp"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_gravity="center">
+            app:layout_constraintStart_toStartOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/part_1"
@@ -33,77 +35,77 @@
                     android:id="@+id/sub_upper_constraint"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent">
+                    app:layout_constraintTop_toTopOf="parent">
 
-                <TextView
-                    android:id="@+id/txt_weburl"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="https://"
-                    android:textSize="18dp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toStartOf="@id/edt_weburl"
-                    app:layout_constraintBaseline_toBaselineOf="@id/edt_weburl"/>
+                    <TextView
+                        android:id="@+id/txt_weburl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="https://"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBaseline_toBaselineOf="@id/edt_weburl"
+                        app:layout_constraintEnd_toStartOf="@id/edt_weburl"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                <EditText
-                    android:id="@+id/edt_weburl"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:textSize="16sp"
-                    android:text="www.google.com"
-                    android:layout_marginStart="5dp"
-                    android:inputType="textWebEditText"
-                    app:layout_constraintStart_toEndOf="@id/txt_weburl"
-                    app:layout_constraintTop_toTopOf="@id/txt_weburl"/>
+                    <EditText
+                        android:id="@+id/edt_weburl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:ems="10"
+                        android:inputType="textWebEditText"
+                        android:text="www.google.com"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toEndOf="@id/txt_weburl"
+                        app:layout_constraintTop_toTopOf="@id/txt_weburl" />
 
-                <Button
-                    android:id="@+id/btn_browse"
-                    android:layout_width="30dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="10dp"
-                    android:background="@drawable/baseline_search_12"
-                    app:layout_constraintTop_toTopOf="@id/txt_weburl"
-                    app:layout_constraintStart_toEndOf="@id/edt_weburl"
-                    app:layout_constraintBaseline_toBaselineOf="@id/edt_weburl"/>
+                    <Button
+                        android:id="@+id/btn_browse"
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/baseline_search_12"
+                        app:layout_constraintBaseline_toBaselineOf="@id/edt_weburl"
+                        app:layout_constraintStart_toEndOf="@id/edt_weburl"
+                        app:layout_constraintTop_toTopOf="@id/txt_weburl" />
 
-                <TextView
-                    android:id="@+id/txt_phoneno"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="+91"
-                    android:textSize="18dp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/txt_weburl"
-                    app:layout_constraintEnd_toStartOf="@id/edt_phoneno"
-                    app:layout_constraintBaseline_toBaselineOf="@id/edt_phoneno"/>
+                    <TextView
+                        android:id="@+id/txt_phoneno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+91"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBaseline_toBaselineOf="@id/edt_phoneno"
+                        app:layout_constraintEnd_toStartOf="@id/edt_phoneno"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txt_weburl" />
 
-                <EditText
-                    android:id="@+id/edt_phoneno"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:textSize="16sp"
-                    android:layout_marginTop="20dp"
-                    android:inputType="textWebEditText"
-                    app:layout_constraintStart_toStartOf="@id/edt_weburl"
-                    app:layout_constraintStart_toEndOf="@id/txt_phoneno"
-                    app:layout_constraintTop_toBottomOf="@id/txt_weburl"/>
+                    <EditText
+                        android:id="@+id/edt_phoneno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toEndOf="@id/txt_phoneno"
+                        app:layout_constraintStart_toStartOf="@id/edt_weburl"
+                        app:layout_constraintTop_toBottomOf="@id/txt_weburl" />
 
-                <Button
-                    android:id="@+id/btn_call"
-                    android:layout_width="30dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="10dp"
-                    android:background="@drawable/baseline_call_12"
-                    app:layout_constraintTop_toTopOf="@id/txt_phoneno"
-                    app:layout_constraintStart_toEndOf="@id/edt_phoneno"
-                    app:layout_constraintBaseline_toBaselineOf="@id/edt_phoneno"/>
+                    <Button
+                        android:id="@+id/btn_call"
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/baseline_call_12"
+                        app:layout_constraintBaseline_toBaselineOf="@id/edt_phoneno"
+                        app:layout_constraintStart_toEndOf="@id/edt_phoneno"
+                        app:layout_constraintTop_toTopOf="@id/txt_phoneno" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -114,8 +116,8 @@
                     android:layout_marginTop="30dp"
                     app:cardCornerRadius="5dp"
                     app:cardElevation="5dp"
-                    app:layout_constraintStart_toStartOf="@id/sub_upper_constraint"
                     app:layout_constraintEnd_toEndOf="@id/sub_upper_constraint"
+                    app:layout_constraintStart_toStartOf="@id/sub_upper_constraint"
                     app:layout_constraintTop_toBottomOf="@id/sub_upper_constraint">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
@@ -128,40 +130,40 @@
                             android:layout_width="40dp"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
-                            app:layout_constraintStart_toStartOf="parent"
+                            android:background="@drawable/baseline_calllog_12"
                             app:layout_constraintEnd_toStartOf="@id/btn_gallery"
-                            app:layout_constraintTop_toTopOf="parent"
-                            android:background="@drawable/baseline_calllog_12"/>
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <Button
                             android:id="@+id/btn_gallery"
                             android:layout_width="50dp"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="20dp"
-                            app:layout_constraintStart_toEndOf="@id/btn_calllog"
+                            android:background="@drawable/baseline_gallery_12"
                             app:layout_constraintEnd_toStartOf="@id/btn_camera"
-                            app:layout_constraintTop_toTopOf="parent"
-                            android:background="@drawable/baseline_gallery_12"/>
+                            app:layout_constraintStart_toEndOf="@id/btn_calllog"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <Button
                             android:id="@+id/btn_camera"
                             android:layout_width="50dp"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="20dp"
-                            app:layout_constraintStart_toEndOf="@id/btn_gallery"
-                            app:layout_constraintTop_toTopOf="parent"
+                            android:background="@drawable/baseline_photo_camera_12"
                             app:layout_constraintEnd_toStartOf="@id/btn_alarm"
-                            android:background="@drawable/baseline_photo_camera_12"/>
+                            app:layout_constraintStart_toEndOf="@id/btn_gallery"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <Button
                             android:id="@+id/btn_alarm"
                             android:layout_width="45dp"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="20dp"
-                            app:layout_constraintStart_toEndOf="@id/btn_camera"
+                            android:background="@drawable/baseline_alarm_12"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            android:background="@drawable/baseline_alarm_12"/>
+                            app:layout_constraintStart_toEndOf="@id/btn_camera"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -10,6 +10,7 @@ import android.provider.MediaStore
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         var edt_weburl: EditText = findViewById(R.id.edt_weburl)
-        var edt_phone_no: EditText = findViewById<EditText?>(R.id.edt_phoneno)
+        var edt_phoneno: EditText = findViewById(R.id.edt_phoneno)
         var btn_browse: Button = findViewById(R.id.btn_browse)
         var btn_call: Button = findViewById(R.id.btn_call)
         var btn_calllog: Button = findViewById(R.id.btn_calllog)
@@ -30,7 +31,13 @@ class MainActivity : AppCompatActivity() {
         }
 
         btn_call.setOnClickListener {
-            Intent(Intent.ACTION_DIAL, Uri.parse("$edt_phone_no")).also { startActivity(it) }
+            if(edt_phoneno.toString() != null){
+//                Intent(Intent.ACTION_DIAL, Uri.parse("tel:"+8802177690)).also { startActivity(it) }
+                Intent(Intent.ACTION_DIAL, Uri.parse("tel:${edt_phoneno.text.toString()}")).also { startActivity(it) }
+            }
+            else if(edt_phoneno == null){
+                Toast.makeText(this,"Enter mobile number to make call",Toast.LENGTH_SHORT).show()
+            }
         }
 
         btn_calllog.setOnClickListener {
