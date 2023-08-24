@@ -64,7 +64,7 @@
                 <Button
                     android:id="@+id/btn_browse"
                     android:layout_width="30dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:layout_marginLeft="10dp"
                     android:background="@drawable/baseline_search_12"
                     app:layout_constraintTop_toTopOf="@id/txt_weburl"
@@ -98,7 +98,7 @@
                 <Button
                     android:id="@+id/btn_call"
                     android:layout_width="30dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:layout_marginLeft="10dp"
                     android:background="@drawable/baseline_call_12"
                     app:layout_constraintTop_toTopOf="@id/txt_phoneno"
